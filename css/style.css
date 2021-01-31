@@ -1,0 +1,1141 @@
+@charset "UTF-8";
+/*共通部分-----------------------------------------------------------------------------------------*/
+/*ページ全体--------------------------------------------*/
+/*基本的なこと---------------------*/
+body{
+    font-family: 'Vollkorn', serif;
+    line-height:1.7;
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    max-width:100%;
+}
+.wrapper{
+    max-width: 1100px;
+    margin:0 auto;
+    padding:0 4px;
+}
+/*パンくずリスト--------------------*/
+.cp_breadcrumb *, .cp_breadcrumb *:after, .cp_breadcrumb *:before {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_breadcrumb {
+	margin: 1em auto;
+    padding: 0.5em 1em;
+    color:navy;
+}
+.cp_breadcrumb a {
+	text-decoration: none;
+	color:navy;
+}
+.cp_breadcrumb a:hover{
+    color:darkred;
+    border-bottom:darkred solid 1px;
+}
+.cp_breadcrumb .breadcrumbs {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cp_breadcrumb li {
+	display: inline-block;
+	position: relative;
+	padding-right: calc(16px + 8px);
+	margin-right: 8px;
+	color: navy;
+}
+.cp_breadcrumb li::before {
+	content: '›';
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	text-align: center;
+	font-size: 1em;
+	color: inherit;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.cp_breadcrumb li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+	color:navy;
+}
+.cp_breadcrumb li:last-child::before {
+	content: normal;
+}
+/*ページタイトル--------------------*/
+.page-main-title h1{
+    font-size:2.5rem;
+    padding:0.5rem 1rem;
+    border-left: 5px solid navy;
+    background: #a0befa;
+    display: inline-block;
+}
+/*小見出し-------------------------*/
+.title{
+    background-color:rgb(133, 166, 255);
+    text-align:center;
+    font-size:1.25rem;
+    border-radius:8px;
+}
+/*上に戻るボタン-------------------*/
+.up-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    transition:1s;
+    opacity:0.7;
+    z-index:2;
+}
+.up-btn:hover{
+    opacity:1;
+}
+
+
+/*ヘッダー--------------------------------------------*/
+.header{
+    width:100%;
+    background-color: rgb(214, 226, 245);
+    box-shadow: 0px 0.5px 0.5px 0px rgba(0,0,0,0.3);
+}
+header{
+    margin:0 4%;
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    margin:0;
+    padding:0;
+    font-size:20px;
+}
+header a{
+    text-decoration: none;
+    color:black;
+}
+header nav a:hover{
+    color:rgb(87, 90, 243);
+    transition:ease-out 0.2s;
+    border-bottom:rgb(87, 90, 243) solid 1px;
+    transition:ease-out 0.2s;
+}
+header ul{
+    list-style: none;
+    margin:0 auto;
+    text-transform: uppercase;
+    display: flex;
+    margin-top:40px;
+}
+header li{
+    font-size:14px;
+    display:inline-block;
+}
+header li+li{
+    margin-left:17px;
+}
+header nav{
+    margin:0 0 0 auto;
+}
+.logo{
+    margin-top:10px;
+    width:200px;
+}
+
+/*フッター--------------------------------------------*/
+footer{
+    background:rgba(47, 65, 170, 0.637);
+    text-align: center;
+    padding: 15px 0;
+}
+footer p{
+    color:white;
+    font-size:1.25rem;
+}
+/*ホーム-------------------------------------------------------------------------------------------*/
+/*サイトについて--------------------*/
+.site-ex strong{
+    font-size:1.4rem;
+}
+/*本文-----------------------------*/
+.text p{
+    font-size:1.2rem;
+}
+
+
+/*コウちゃん------------------------*/
+.kouchan-info{
+    text-align:center;
+    vertical-align: middle;
+}
+
+.kouchan h2{
+    text-align: center;
+    font-size:2.25rem;
+    margin-top:60px;
+}
+.kouchan h3{
+    text-align: center;
+    font-size:2rem;
+}
+#kouchan-sns{
+    clear: both;
+    font-size:2rem;
+}
+.kouchan-sns{
+    float:left;
+    padding-right:20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/*ボタン----------------------------*/
+.btn {
+    font-size:1.7rem;
+    font-weight:bold;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #706caa;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 3px #627295;
+    border-radius:6px;
+}
+.btn:hover{
+    background:#9693be;
+    border-bottom: solid 3px #7f8daa;
+}
+.btn:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+.home-btn{
+    text-align:center;
+    margin-bottom:10px;
+}
+/*タグ------------------------------*/
+label {
+    display: block;
+    margin:auto 0;
+    padding : 15px;
+    line-height: 1;
+    color :#fff;
+    background : rgb(42, 81, 255);
+    cursor :pointer;
+    width: 40%;
+    font-size:20px;
+}
+input {
+    display: none;
+}
+.home-tagu ul {
+    margin: 0;
+    padding: 0;
+    background :#c8fbff;
+    list-style: none;
+    width: 40%;
+} 
+.home-tagu li {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/*アコーディオン仕組み*/
+#type1:checked ~ #tagu-bar li{
+    height: 54px;
+    opacity: 1;
+}
+.tagu-bar {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0;
+    
+}
+.tagu-bar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    line-height: 1;
+}
+.tagu_bar label {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 8px 12px;
+    line-height: 1;
+    color: #ffffff;
+    background: #70cbff;
+    cursor: pointer;
+    border-bottom: solid rgb(0, 140, 255);
+    border-radius:10px;
+    
+}
+.tagu_bar label::before {
+    position: absolute;
+    content: '▼';
+    color: #ffffff;
+    right: 0.5em;
+    top: 25%;
+}
+.tagu_bar input {
+    display: none;
+}
+.tagu_bar ul {
+    margin: 0;
+    padding: 0;
+    background: #ecf4f8;
+    list-style: none;
+}
+.tagu_bar li {
+    overflow-y: hidden;
+    max-height: 0;
+    transition: all 0.5s;
+    margin-right: 15px;
+}
+/*リストが増えたらULごとに追加してください*/
+#tagu_bar_time:checked ~ #link_time li,
+#tagu_bar_purpose:checked ~ #link_purpose li,
+#tagu_bar_place:checked ~ #link_place li {
+    max-height: 46px;
+    opacity: 1;
+}
+/*「＃タグ」の設定*/
+.tagu_bar a{
+    color: rgba(13, 43, 100, 0.89);
+    font-size:17px;
+}
+.tagu_bar a:hover{
+    color: rgb(145, 22, 22);
+    border-bottom: rgb(145, 22, 22) solid 1px;
+}
+
+/*観光地一覧---------------------------------------------------------------------------------------*/
+.page-link{
+    display:flex;
+    font-size:1.3rem;
+    text-transform: uppercase;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.page-link li{
+    margin-left:30px;
+}
+.page-link a{
+    text-decoration: none;
+    color:darkblue;
+}
+.page-link a:hover{
+    color:darkred;
+    border-bottom:darkred solid 1.2px;
+}
+.grid a{
+    text-decoration: none;
+    color:darkblue;
+}
+.grid a:hover{
+    color:darkred;
+    border-bottom:darkred solid 1.2px;
+}
+/*写真一覧--------------------------*/
+.grid{
+    display:grid;
+    gap:26px;
+    grid-template-columns: repeat(auto-fit,minmax(210px,2fr));
+    margin-top:6%;
+    margin-bottom:50px;
+}
+.grid p{
+    text-align:center;
+    font-size:1.25rem;
+}
+.item{
+    position:relative;
+    overflow:hidden;
+    padding-top:60%;
+}
+.item img{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*タグから探す------------------------------------------------------------------------------------------*/
+/*地区ごとのリンク*/
+.area{
+    display:flex;
+    font-size:1.3rem;
+    text-transform: uppercase;
+    list-style: none;
+    flex-wrap: wrap;
+    
+}
+.area li{
+    margin:0 atuo;
+    padding-right:20px;
+}
+.area a{
+    text-decoration: none;
+    color:darkblue;
+}
+.area a:hover{
+    color:darkred;
+    border-bottom:darkred solid 1.2px;
+}
+/*観光地別の概要*/
+.kankochi{
+    background-color:rgb(201, 215, 252);
+    border-radius:10px;
+    margin:1rem;
+    padding:1rem;
+}
+
+.kankochi a{
+    text-decoration: none;
+    color:black;
+}
+.gaiyo1, .gaiyo2, .gaiyo3{
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    align-items: center;
+}
+.gaiyo1 p,.gaiyo2 p{
+    width:50%;
+    min-width: 150px;
+}
+.gaiyo1 p+p,.gaiyo2 p+p{
+    margin-left:1rem;
+}
+.tag-area p{
+    font-weight:bold;
+}
+.comment{
+    position:relative;
+    display:inline-block;
+    width:100%;
+    height:auto;
+    background:#9bb8f7;
+    padding:1rem;
+    text-align:left;
+    color:#000000;
+    font-size:1rem;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+}
+.comment:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(120, 162, 255, 0);
+    border-top-width:16px;
+    border-bottom-width:16px;
+    border-left-width:15px;
+    border-right-width:15px;
+    margin-left: -15px;
+    border-top-color:#9bb8f7;
+    top:100%;
+    left:50%;
+}
+
+.kouchan-comment{
+    width:30%;
+    height:auto;
+    float:right;
+    margin-right:3.5rem;
+}
+.tag-all{
+    width:100%;
+    display:flex;
+    font-size:1.3rem;
+    text-transform: uppercase;
+    list-style: none;
+    background-color:#9bb8f7;
+    border-radius:10px;
+    border:blue solid 1px;
+    flex-wrap: wrap;
+    margin-left:0;
+    margin-bottom:0;
+    padding:0.2rem;
+    
+}
+.tag-all li{
+    font-weight:bold;
+}
+.tag-all li{
+    margin-right:0.75rem;
+}
+.tag-all li a{
+    text-decoration: none;
+    color:black;
+}
+.tag-all a:hover{
+    color:darkred;
+    border-bottom:darkred solid 1.2px;
+}
+.kankochi h2{
+    font-size:2.5rem;
+    margin-left:1rem;
+    margin:0 auto 0 1rem;
+}
+.kankochi-page-link{
+    text-align:center;
+    font-size:1.75rem;
+    margin-top:1rem;
+}
+.kankochi-page-link a:hover{
+    color:darkred;
+    border-bottom:darkred solid 1px;
+}
+
+/*観光地別ページ-----------------------------------------------------------------------------------*/
+/*生徒のコメント*/
+.kankochi-comment{
+    display:flex;
+    justify-content: space-between;
+    margin:1rem;
+    align-items: center;
+}
+
+.kankochi-comment div+div{
+    margin-left:1rem;
+}
+.kankochi-comment div{
+    width:50%;
+}
+.st-comment{
+    display:block;
+    font-weight:bold;
+}
+.st{
+    font-size:1.5rem;
+    text-align: center;
+    border-bottom:#f0bd7a solid 4px;
+}
+.st-comment img{
+    width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: solid skyblue;
+	background-color: #ffffff;
+    margin: 5px;
+    margin-bottom:0;
+}
+.gaiyo2-2, .gaiyo3-2{
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    align-items: center;
+}
+.gaiyo2-2 p{
+    width:50%;
+    min-width: 150px;
+}
+.gaiyo2-2 p+p{
+    margin-left:1rem;
+}
+
+
+/*ギャラリー---------------------------------------------------------------------------------------*/
+/*ギャラリートップ*/
+.gallery_top{
+	height: 500px;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	background: linear-gradient(rgba(54, 181, 185, 0.4),rgba(54,181,185,.4)), url(../images/main/編集した写真.jpg) no-repeat left center;
+	background: linear-gradient(rgba(54,181,185,.4),rgba(54,181,185,.4)), url(../images/main/編集した写真.jpg) no-repeat left center/cover;
+}
+.gallery_top p{
+	color: #fff;
+	position: absolute;
+	top: 20%;
+	font-size: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+/*ギャラリー目次*/
+.gallery_mokuji{
+	margin-top: 10px;
+}
+.gallery_mokuji h2{
+	font-size: 25px;
+	color: #ffffff;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	background-color: rgb(67, 149, 255);
+    text-align: center;
+    border-radius:8px;
+}
+.gallery_mokuji ol{
+	list-style: none;
+	padding-left: 0;
+	margin: 10px;
+	text-align: center;
+}
+.gallery_mokuji li{
+	display: inline-block;
+	font-size: 20px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.gallery_mokuji li+li{
+    border-left:#7eade9 dotted;
+}
+.gallery_mokuji a{
+	font-size: 18px;
+	color: blue;
+}
+.gallery_mokuji a:hover{
+    color: darkred;
+    border-bottom:darkred solid 1px;
+}
+.season ol{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.season li{
+	display: inline;
+}
+.season li+li{
+    border-left:none;
+}
+
+
+/*ギャラリー写真*/
+
+/*ギャラリー年表*/
+.gallery h2{
+	font-size: 30px;
+	color: royalblue;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	border-bottom: dotted rgb(0, 255, 221);
+	border-top: dotted rgb(0, 255, 221);
+	text-align: center;
+	background-color: rgb(225, 246, 255);
+}
+.date{
+	display: grid;
+	gap: 26px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 6%;
+	margin-bottom: 50px;
+}
+
+/*ギャラリーコンテンツ*/
+.gallery h3{
+	background-color: rgb(185, 218, 255);
+	margin: 0 auto;
+	width: 70%;
+	padding-bottom: 10px;
+}
+.content{
+	padding: 10px;
+}
+.content img{
+    width: 100%; /* ADD */
+  height:100%; /* ADD */
+  object-fit: scale-down;
+
+}
+.content p{
+	font-size: 10px;
+	margin-left: 10px;
+}
+.open_img img{
+	width: 100%;
+	height: 100%;
+}
+
+.lb {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    transition: .3s opacity ease;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.lb img {
+    width: auto !important;
+    max-height: 100%!important;
+    cursor: pointer;
+}
+
+.lb img,
+.lb iframe {
+    transform: scale(.85);
+    transition: .3s all ease;
+}
+
+.lb:target {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 101;
+}
+
+.lb:target img,
+.lb:target iframe {
+    transform: scale(1);
+}
+
+/* 閉じるボタン*/
+.lb::before,.lb::after {
+    display: block;
+    position: fixed;
+    content: "";
+    width: 24px;
+    height:3px;
+    top: 24px;
+    right: 12px;
+    background: #fff;
+    border-radius: 4px;
+}
+.lb::before {
+    transform: rotate(-315deg);
+}
+.lb::after {
+    transform: rotate(315deg);
+}
+
+/*コウちゃんのお部屋--------------------------------------------------------------------------------*/
+#kouchan-info-all{
+    display: flex;
+    justify-content: space-between;
+    padding:1rem;
+    margin:0 auto;
+    align-items: center;
+    background-color:rgb(229, 235, 250);
+    box-shadow:
+        inset 0 0 10px #fff /* 背景色と同じ色 */,
+        inset 0 0 10px #fff,
+        inset 0 0 10px #fff,
+        inset 0 0 10px #fff;
+}
+#kouchan-info-all p{
+    width:33%;
+    font-size:1.25rem;
+}
+#kouchan-info-all p+p{
+    margin-left:1rem;
+}
+#kouchan-grid{
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto;
+    align-items: center;
+}
+#kouchan-grid p{
+    font-size:1.2rem;
+}
+#kouchan-grid p strong{
+    font-size:1.5rem;
+}
+.sns{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.insta img{
+    margin: 0;
+    padding: 0;
+    background:#000;
+}
+.insta img{
+    height:50px;
+    width:auto;
+    opacity:1;
+}
+.insta img:hover{
+    opacity:0.5
+}
+.sns p+p{
+    margin-left:1rem;
+}
+
+/* LINE@　友だちボタン*/
+#line_atto a {
+    font-family:"rubrik","serif";
+    background:#25af00;
+    box-shadow:0 5px 0 #219900;
+    font-size:100%;
+    position:relative;
+    display:block;
+    padding:1px;
+    color:#fff;
+    border-radius:6px;
+    text-align:center;
+    text-decoration: none;
+    font-weight: bold;
+    width:210px;
+    margin:5% 0% 5% 0%;
+}
+ 
+#line_atto a:hover {
+    background:#219900;
+    -webkit-transform: translate3d(0px, 5px, 1px);
+    -moz-transform: translate3d(0px, 5px, 1px);
+    transform: translate3d(0px, 5px, 1px);
+    box-shadow:none;
+}
+
+
+/*タブレット対応----------------------------------------------------------------------------------------------------------*/
+@media (max-width:960px){
+    /*共通部分---------------------------------------------------------------------------------------*/
+
+
+}
+
+/*スマホ対応-------------------------------------------------------------------------------------------------------------*/
+@media (max-width:480px){
+    /*共通部分---------------------------------------------------------------------------------------*/
+    /*基本的なこと----------------------------------------------*/
+    body{
+        margin:0 auto;
+        padding:0 4px;
+    }
+    .wrapper{
+        margin:0 auto;
+        padding:0 1rem;
+    }
+    .logo{
+        margin:0 auto;
+    }
+    /*ページのタイトル---------------*/
+    .page-main-title h1{
+        font-size:1rem;
+        padding:0.25rem 0.75rem;
+    }
+    /*小見出し----------------------*/
+    .title{
+        font-size:0.5rem;
+    }
+    .kouchan-info{
+        display:flex;
+        flex-wrap:nowrap;
+        justify-content:space-between;
+    }
+    /*パンくずリスト-----------------*/
+    .breadcrumbs{
+        font-size:5px;
+    }
+    .cp_breadcrumb li::before {
+        content: '›';
+        width: 0.5em;
+        height: 0.5em;
+        line-height: 1;
+        text-align: center;
+        font-size: 5px;
+        color: inherit;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+    .cp_breadcrumb li {
+        display: inline-block;
+        position: relative;
+        padding-right: calc(6px + 2.5px);
+        margin-right: 8px;
+        color: navy;
+    }
+    /*上に戻るボタン-----------------*/
+    .up-btn{
+        width:20%;
+    }
+    /*ヘッダー--------------------------------------------------*/
+    header{
+        flex-direction: column;
+        align-items: center; 
+    }
+    .header{
+        padding-bottom: 10px;   
+    }
+    header ul{
+        margin-top:3px;
+    }
+    header li{
+        list-style: none;
+        font-size:10px;
+    }
+    header li+li{
+        margin-left:13px;
+    }
+    .logo{
+        padding-top:5px;
+        width:125px;
+    }
+    
+    
+    /*フッター--------------------------------------------------*/
+    footer p{
+        color:white;
+        font-size:0.5rem;
+    }
+
+    /*ホーム-----------------------------------------------------------------------------------------*/
+    /*スライド----------------------*/
+    
+    
+    /*本文--------------------------*/  
+    .text p{
+        font-size:10px;
+    }
+    .text strong{
+        font-size:0.7rem;
+    }
+    /*ボタン------------------------*/
+    .home-btn a{
+        font-size:12px;
+    }
+    /*コウちゃん*/
+    .kouchan-info p{
+        width:50%;
+        height:auto;
+        vertical-align: middle;
+    }
+    .kouchan-info h3{
+        font-size:0.7rem;
+    }
+    /*タグ*/
+    label {
+        font-size:6px;
+    }
+    .tagu_bar label {
+        border-radius: 6px;
+        padding:5px 10px;
+    }
+    .tagu_bar a{
+        font-size:10px;
+    }
+    
+    /*観光地名一覧----------------------------------------------------------------------------------*/
+    .kankochi h2{
+        font-size:1rem;
+    }
+    .gaiyo1, .gaiyo2, .gaiyo3{
+        display:grid;
+        margin:0 auto;
+        align-items: center;
+    }
+    .gaiyo1 p{
+        width:100%;
+        font-size:0.5rem;
+    }
+    .gaiyo2{
+        display:none;
+    }
+    .gaiyo3{
+        flex-direction:column;
+    }
+    .gaiyo3.tag-all{
+        flex-wrap: wrap;
+    }
+    .gaiyo3 img{
+        display:none;
+    }
+    .grid p{
+        font-size:0.7rem;
+    }
+
+    /*タグから探す----------------------------------------------------------------------------------*/
+    /*地区別のリンク-----------------*/
+    .area li{
+        font-size:0.5rem;
+    }
+    .page-link li{
+        font-size:0.5rem;
+    }
+    /*観光地別の概要-----------------*/
+    .kankochi{
+        margin:1rem 1rem;
+    }
+    .kankochi h2{
+        font-size:12.5px;
+    }
+    .gaiyo1 p+p{
+        margin-left:0;
+    }
+    .tag-all{
+        text-align: left;
+    }
+    .gaiyo3{
+        text-align:center;
+    }
+    .tag-all li{
+        font-size:0.6rem;
+    }
+    .gaiyo2 p,.gaiyo3 p{
+        margin:0;
+        padding:0;
+    }
+    .kankochi-page-link{
+        font-size:0.75rem;
+    }
+    .comment{
+        max-width:87%;
+    }
+
+    /*観光地別ページ---------------------------------------------------------------------------------*/
+    .comment{
+        font-size:5px;
+    }
+    .kankochi-comment{
+        display:block;
+        margin:1rem auto;
+    }
+    .kankochi-comment div+div{
+        margin-left:0;
+    }
+    .kankochi-comment div{
+        width:100%;
+    }
+    .st{
+        margin-top:0;
+        font-size:0.8rem;
+    }
+    .comme{
+        font-size:0.5rem;
+    }
+    .st-comment img{
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: solid skyblue;
+        background-color: #ffffff;
+        margin: 1px;
+        margin-bottom:0;
+    }
+    .gaiyo2-2 p+p, .gaiyo3-2 p+p{
+        margin-left:0;
+    }
+    .gaiyo2-2,.gaiyo3-2{
+        display:block;
+        margin:0 auto;
+    }
+    .gaiyo2-2 p,.gaiyo3-2 p{
+        width:100%;
+    }
+    .gaiyo3-2{
+        display: flex;
+        flex-direction:column-reverse;
+    }
+    .gaiyo3-2 p{
+        margin:0;
+        padding:0;
+    }
+    /*コウちゃんのお部屋-----------------------------------------------------------------------------*/
+    #kouchan-info-all{
+        flex-direction:column;
+        display: grid;
+        padding:1rem;
+        margin:0 auto;
+        align-items: center;
+        background-color:rgb(229, 235, 250);
+        box-shadow:
+            inset 0 0 10px #fff /* 背景色と同じ色 */,
+            inset 0 0 10px #fff,
+            inset 0 0 10px #fff,
+            inset 0 0 10px #fff;
+    }
+    #kouchan-info-all p{
+        font-size:0.5rem;
+        width:100%;
+    }
+    #kouchan-info-all p+p{
+        margin-left:0;
+    }
+    #kouchan-grid p{
+        font-size:0.5rem;
+    }
+    #kouchan-grid p strong{
+        font-size:0.8rem;
+    }
+    #kouchan-info-all {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+    }
+        
+    #kouchan-info-all .order2 {
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        box-ordinal-group: 2;
+    }
+    #kouchan-info-all .order1 {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        box-ordinal-group: 1;
+    }
+    #kouchan-info-all .order3{
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+        box-ordinal-group: 3;
+    }
+
+    /* LINE@　友だちボタン*/
+    #line_atto a {
+        width:100px;
+        font-size:10px;
+        box-shadow:0 2px 0 #219900;
+    }
+    .insta img{
+        height:20px;
+    }
+    .sns{
+        align-items:baseline;
+    }
+
+    /*ギャラリー-------------------------------------------------------------------------------------*/
+    .gallery_mokuji li{
+        font-size:10px;
+    }
+    .gallery_mokuji li+li{
+        border-left:none;
+    }
+    .gallery_mokuji a{
+        font-size:6px;
+    }
+    .gallery_mokuji h2{
+        font-size:18px;
+    }
+}
