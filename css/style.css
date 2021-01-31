@@ -209,8 +209,8 @@ footer p{
     text-decoration: none;
     background: #706caa;/*ボタン色*/
     color: #FFF;
-    border-bottom: solid 3px #627295;
-    border-radius:6px;
+    border-bottom: solid 2px #464280;
+    border-radius:5px;
 }
 .btn:hover{
     background:#9693be;
