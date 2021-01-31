@@ -862,7 +862,7 @@ input {
         font-size: 7px;
         color: inherit;
         position: absolute;
-        top: 20%;
+        top: 25%;
         right: 0;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
