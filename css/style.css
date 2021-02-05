@@ -815,6 +815,27 @@ input {
     transform: translate3d(0px, 5px, 1px);
     box-shadow:none;
 }
+/*LINEスタンプ*/
+.line-stamp{
+    background:#fff;
+    border:solid 2px #25af00;
+    margin:10px auto;
+    border-radius:6px;
+    text-align:center;
+    text-decoration: none;
+    width:350px;
+}
+.line-stamp:hover{
+    background: #a6f790;
+}
+.line-stamp p{
+    padding:0;
+    margin:0;
+}
+.line-stamp a{
+    color: #25af00;
+    font-weight:bold;
+}
 
 
 /*タブレット対応----------------------------------------------------------------------------------------------------------*/
