@@ -1096,7 +1096,7 @@ input {
             inset 0 0 10px #fff;
     }
     #kouchan-info-all p{
-        font-size:0.5rem;
+        font-size:12px;
         width:100%;
     }
     #kouchan-info-all p+p{
